@@ -1,6 +1,7 @@
+const moment = require('moment');
 module.exports = {
   "title": "Hero博客",
-  "description": "个人博客",
+  "description": "天生我材必有用 千金散尽还复来",
   "dest": "public",
   "head": [
     [
@@ -22,78 +23,26 @@ module.exports = {
   "themeConfig": {
     "nav": [
       {
-        "text": "Home",
+        "text": "首页",
         "link": "/",
         "icon": "reco-home"
-      },
-      {
-        "text": "TimeLine",
-        "link": "/timeline/",
-        "icon": "reco-date"
-      },
-      {
-        "text": "Docs",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
-        ]
-      },
-      {
-        "text": "Contact",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "GitHub",
-            "link": "https://github.com/recoluan",
-            "icon": "reco-github"
-          }
-        ]
       }
     ],
-    "sidebar": {
-      "/docs/theme-reco/": [
-        "",
-        "theme",
-        "plugin",
-        "api"
-      ]
-    },
     "type": "blog",
     "blogConfig": {
       "category": {
         "location": 2,
-        "text": "Category"
-      },
-      "tag": {
-        "location": 3,
-        "text": "Tag"
+        "text": "分类"
       }
     },
-    "friendLink": [
-      {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
-      },
-      {
-        "title": "vuepress-theme-reco",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
-      }
-    ],
-    "logo": "/logo.png",
-    "search": true,
-    "searchMaxSuggestions": 10,
-    "lastUpdated": "Last Updated",
+    "logo": "/images/gouku.gif",
+    "lastUpdated": "最近一次心跳时间",
     "author": "Hero",
-    "authorAvatar": "/avatar.png",
+    "authorAvatar": "/images/gouku.gif",
     "record": "xxxx",
-    "startYear": "2017"
+    "startYear": "2021",
+    "mode": "dark",
+    "modePicker": false
   },
   "markdown": {
     "lineNumbers": true
@@ -124,6 +73,16 @@ module.exports = {
         autoShrink: true,
         shrinkMode: 'mini',
         floatPosition: 'left'
+      }
+    ],
+    [
+      "@vuepress/last-updated",
+      {
+        transformer: (timestamp, lang) => {
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
       }
     ]
   ]
