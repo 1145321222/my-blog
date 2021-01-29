@@ -1,14 +1,15 @@
 const moment = require('moment');
 module.exports = {
   "title": "Hero博客",
+  "base": "/blog/",
   "description": "天生我材必有用 千金散尽还复来",
-  "dest": "public",
+  "dest": "blog",
   "head": [
     [
       "link",
       {
         "rel": "icon",
-        "href": "/favicon.ico"
+        "href": "/images/favicon.ico"
       }
     ],
     [
@@ -36,7 +37,7 @@ module.exports = {
       }
     },
     "logo": "/images/gouku.gif",
-    "lastUpdated": "最近一次心跳时间",
+    "lastUpdated": false,
     "author": "Hero",
     "authorAvatar": "/images/gouku.gif",
     "record": "xxxx",
@@ -67,22 +68,12 @@ module.exports = {
         audios: [{
           name: '千千万万',
           artist: '深海鱼子酱',
-          url: '/music/千千万万.mp3',
-          cover: '/images/qianqianwanwan.png'
+          url: 'http://8.133.170.196/blog/bgm/1.mp3',
+          cover: 'http://8.133.170.196/blog/images/1.png'
         }],
         autoShrink: true,
         shrinkMode: 'mini',
         floatPosition: 'left'
-      }
-    ],
-    [
-      "@vuepress/last-updated",
-      {
-        transformer: (timestamp, lang) => {
-          const moment = require('moment')
-          moment.locale(lang)
-          return moment(timestamp).fromNow()
-        }
       }
     ]
   ]
