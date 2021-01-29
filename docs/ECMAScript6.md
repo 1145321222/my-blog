@@ -15,19 +15,6 @@ categories:
 + 什么是解构赋值？
 
 + 使用模板字符串
----
-    /*
-    * 使用模板字符串用于对指定格式的字符串进行格式化。
-    * example:
-    * const str = "my name is {name} and I am {age} years old";
-    * const data = {name: 'bai', age: '99'}
-    * format(str, data);
-    * 输出 my name is bai and I am 99 years old
-    */
-    function format(str, data) {
-        // your code here
-    }
----
 
 + es6中新增的数组方法有哪些？有什么不同？
 
