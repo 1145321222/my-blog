@@ -37,7 +37,7 @@ module.exports = {
       }
     },
     "logo": "/images/gouku.gif",
-    "lastUpdated": false,
+    "lastUpdated": "Last Updated",
     "author": "Hero",
     "authorAvatar": "/images/gouku.gif",
     "record": "xxxx",
@@ -75,6 +75,9 @@ module.exports = {
         shrinkMode: 'mini',
         floatPosition: 'left'
       }
+    ],
+    [
+      "@vuepress/last-updated"
     ]
   ]
 }
